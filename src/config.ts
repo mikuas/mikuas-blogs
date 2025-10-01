@@ -13,33 +13,24 @@ import type {
 	SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
-import { getTranslateLanguageFromConfig } from "./utils/language-utils";
-
-// 移除i18n导入以避免循环依赖
-
-// 定义站点语言
-const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
-	subtitle: "One demo website",
-
-	lang: SITE_LANG,
-
+	title: "Mikuas Blog",
+	lang: "zh_CN", // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 	themeColor: {
-		hue: 210, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		hue: 0, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
 		fixed: false, // 对访问者隐藏主题色选择器
 	},
 
-	translate: {
-		enable: true, // 启用翻译功能
-		service: "client.edge", // 使用 Edge 浏览器翻译服务
-		defaultLanguage: getTranslateLanguageFromConfig(SITE_LANG), // 根据站点语言自动设置默认翻译语言
-		showSelectTag: false, // 不显示默认语言选择下拉菜单，使用自定义按钮
-		autoDiscriminate: true, // 自动检测用户语言
-		ignoreClasses: ["ignore", "banner-title", "banner-subtitle"], // 翻译时忽略的 CSS 类名
-		ignoreTags: ["script", "style", "code", "pre"], // 翻译时忽略的 HTML 标签
-	},
+	// translate: {
+	// 	enable: true, // 启用翻译功能
+	// 	service: "client.edge", // 使用 Edge 浏览器翻译服务
+	// 	defaultLanguage: getTranslateLanguageFromConfig(SITE_LANG), // 根据站点语言自动设置默认翻译语言
+	// 	showSelectTag: false, // 不显示默认语言选择下拉菜单，使用自定义按钮
+	// 	autoDiscriminate: true, // 自动检测用户语言
+	// 	ignoreClasses: ["ignore", "banner-title", "banner-subtitle"], // 翻译时忽略的 CSS 类名
+	// 	ignoreTags: ["script", "style", "code", "pre"], // 翻译时忽略的 HTML 标签
+	// },
 	bangumi: {
 		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
@@ -94,14 +85,14 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "Beautiful Mizuki!", // 主页横幅主标题
+			title: "Beautiful Blog!", // 主页横幅主标题
 
-			subtitle: [
-				"A Showcase Demo Site",
-				"Carousel Highlight: Innovation",
-				"Carousel Focus: User Experience",
-				"Carousel Spot: Core Advantages",
-			],
+			// subtitle: [
+			// 	"A Showcase Demo Site",
+			// 	"Carousel Highlight: Innovation",
+			// 	"Carousel Focus: User Experience",
+			// 	"Carousel Spot: Core Advantages",
+			// ],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
@@ -119,7 +110,7 @@ export const siteConfig: SiteConfig = {
 		},
 
 		navbar: {
-			transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
+			transparentMode: "semi", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
 		},
 	},
 	toc: {
@@ -186,68 +177,68 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
+		// {
+		// 	name: "Links",
+		// 	url: "/links/",
+		// 	icon: "material-symbols:link",
+		// 	children: [
+		// 		{
+		// 			name: "GitHub",
+		// 			url: "https://github.com/matsuzaka-yuki/Mizuki",
+		// 			external: true,
+		// 			icon: "fa6-brands:github",
+		// 		},
+		// 		{
+		// 			name: "Bilibili",
+		// 			url: "https://space.bilibili.com/701864046",
+		// 			external: true,
+		// 			icon: "fa6-brands:bilibili",
+		// 		},
+		// 		{
+		// 			name: "Gitee",
+		// 			url: "https://gitee.com/matsuzakayuki/Mizuki",
+		// 			external: true,
+		// 			icon: "mdi:git",
+		// 		},
+		// 	],
+		// },
 		{
-			name: "Links",
-			url: "/links/",
-			icon: "material-symbols:link",
-			children: [
-				{
-					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
-					external: true,
-					icon: "fa6-brands:github",
-				},
-				{
-					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
-					external: true,
-					icon: "fa6-brands:bilibili",
-				},
-				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
-					external: true,
-					icon: "mdi:git",
-				},
-			],
-		},
-		{
-			name: "My",
+			name: "我的",
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
 				LinkPreset.Anime,
 				LinkPreset.Diary,
 				{
-					name: "Gallery",
+					name: "画廊",
 					url: "/albums/",
 					icon: "material-symbols:photo-library",
 				},
 			],
 		},
 		{
-			name: "About",
+			name: "关于",
 			url: "/content/",
 			icon: "material-symbols:info",
 			children: [LinkPreset.About, LinkPreset.Friends],
 		},
 		{
-			name: "Others",
+			name: "其他",
 			url: "#",
 			icon: "material-symbols:more-horiz",
 			children: [
 				{
-					name: "Projects",
+					name: "项目",
 					url: "/projects/",
 					icon: "material-symbols:work",
 				},
 				{
-					name: "Skills",
+					name: "技能",
 					url: "/skills/",
 					icon: "material-symbols:psychology",
 				},
 				{
-					name: "Timeline",
+					name: "时间线",
 					url: "/timeline/",
 					icon: "material-symbols:timeline",
 				},
@@ -257,29 +248,19 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.png", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
-	name: "Mizuki",
-	bio: "The world is big, you have to go and see",
+	avatar: "assets/images/hqfa-avatar.png", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	name: "Mikuas",
+	bio: "世界很大，你要去看看",
 	links: [
 		{
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
-		{
-			name: "Gitee",
-			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			url: "https://space.bilibili.com/",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
-		},
-		{
-			name: "Discord",
-			icon: "fa6-brands:discord",
-			url: "https://discord.gg/MqW6TcQtVM",
+			url: "https://github.com/mikuas",
 		},
 	],
 };
@@ -305,19 +286,19 @@ export const commentConfig: CommentConfig = {
 };
 
 export const announcementConfig: AnnouncementConfig = {
-	title: "Announcement", // 公告标题
-	content: "Welcome to my blog! This is a sample announcement.", // 公告内容
+	title: "公告", // 公告标题
+	content: "欢迎来到我的博客！这是一个示例公告.", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
-		text: "Learn More", // 链接文本
+		text: "了解更多信息", // 链接文本
 		url: "/about/", // 链接 URL
 		external: false, // 内部链接
 	},
 };
 
 export const musicPlayerConfig: MusicPlayerConfig = {
-	enable: true, // 启用音乐播放器功能
+	enable: false, // 启用音乐播放器功能
 };
 
 export const footerConfig: FooterConfig = {
@@ -424,7 +405,6 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 				collapseThreshold: 20,
 			},
 		},
-
 	],
 
 	// 默认动画配置
