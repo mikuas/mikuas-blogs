@@ -7,6 +7,7 @@ tags: ["PySide6", "Python", "Qt"]
 category: 'Desktop-App'
 draft: false 
 lang: ''
+pinned: true
 author: Mikuas
 ---
 
