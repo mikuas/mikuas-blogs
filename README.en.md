@@ -1,106 +1,15 @@
-# 🌸 Mizuki  
+# Fuwari  
 ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
 ![Astro](https://img.shields.io/badge/Astro-5.12.8-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Mizuki Preview](./README.png)
-
 A modern, feature-rich static blog template built with [Astro](https://astro.build), featuring advanced functionality and beautiful design.
 
-[**🖥️ Live Demo**](https://mizuki.mysqil.com/)
-[**📝 Documentation**](https://docs.mizuki.mysqil.com/)
-
 🌏 README Languages
-[**English**](README.en.md) /
 [**中文**](README.md) /
-[**日本語**](./docs/README.ja.md) /
-[**中文繁体**](./docs/README.tw.md) /
-
-## 🆕 v4.9 Update
-- **Pio Live2D Integration**: Added Pio Live2D character, providing a cute interactive companion to enhance user engagement.
-- **Highly Configurable**: Supports detailed configuration in `src/config.ts`, including model path, position, size, dialogue content, etc., to meet personalized needs.
-- **Seamless Navigation**: The "Back to Home" feature now uses the theme's built-in Swup for smooth, no-refresh page transitions.
-
-## 🆕 v4.3 Update
-- **Anime Page:** Redesigned a cuter and more attractive anime page, including anime list, details, and timeline.
-- **Album Page:** Restructured the album page using pagination + folder data indexing solution.
-
-## 🆕 v3.4 Update
-- **New Pages:** Added project showcase, skills showcase, and timeline pages to display your work, professional skills, and growth journey.
-- **Dropdown Menu Fix:** Resolved the issue of border outlines appearing when clicking dropdown menus, improving interface consistency.
-- **Search Optimization:** Enhanced search functionality performance and accuracy.
-- **Footer HTML Injection:** Introduced a new feature allowing custom HTML content injection at the bottom of pages, providing greater flexibility.
-
-## 🆕 v3.3 Update
-- **Mermaid Syntax Support:** Added support for Mermaid chart syntax, now you can embed flowcharts, sequence diagrams, Gantt charts, etc. directly in Markdown.
-- **Umami Analytics:** Added support for Umami analytics, making it easy to integrate website visit data analysis.
-
-![Configuration](configuration.svg)
-
-### 🔧 Component Configuration System Restructuring
-- **Unified Configuration Architecture:** Brand new modular component configuration system, supporting dynamic component management and order configuration
-- **Configuration-Driven Component Loading:** Restructured SideBar component, implementing fully configuration-based component loading mechanism
-- **Unified Control Switches:** Removed independent enable switches for music player and announcement components, unified control through sidebarLayoutConfig
-- **Responsive Layout Adaptation:** Components support responsive layouts, automatically adjusting display based on device type
-
-### 📐 Layout System Optimization
-- **Dynamic Sidebar Position Adjustment:** Support for left/right sidebar switching, with automatic layout adaptation
-- **Intelligent Article Directory Positioning:** When sidebar is on the right, article navigation automatically moves to the left, providing a better reading experience
-- **Grid Layout Improvements:** Optimized CSS Grid layout, resolving container width anomaly issues
-
-### 🎛️ Configuration File Format Standardization
-- **Standardized Configuration Format:** Created unified component configuration file format specifications
-- **Type Safety:** Comprehensive TypeScript type definitions ensuring configuration type safety
-- **Extensibility:** Support for custom component types and configuration options
-
-### 🧹 Code Optimization
-- **Test File Cleanup:** Removed unused test configurations and dependencies, reducing project size
-- **Code Structure Optimization:** Improved component architecture, enhancing code maintainability
-- **Performance Improvement:** Optimized component loading logic, improving page rendering performance
-
----
-
-## ✨ Features
-
-### 🎨 Design & Interface
-- [x] Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
-- [x] Smooth animations and page transitions using [Swup](https://swup.js.org/)
-- [x] Light/dark theme switching with system preference detection
-- [x] Customizable theme colors and dynamic banner carousel
-- [x] Fullscreen background images with carousel, opacity, and blur effects
-- [x] Fully responsive design for all devices
-- [x] Beautiful typography with JetBrains Mono font
-
-### 🔍 Content & Search
-- [x] Advanced search functionality based on [Pagefind](https://pagefind.app/)
-- [x] [Enhanced Markdown features](#-markdown-extensions) with syntax highlighting
-- [x] Interactive table of contents with auto-scrolling
-- [x] RSS feed generation
-- [x] Reading time estimation
-- [x] Article categorization and tagging system
-
-### 🌐 Internationalization
-- [x] **Multi-language support** with real-time translation
-- [x] **Automatic language detection** based on user preferences
-- [x] **Client-side translation** powered by Edge Translate
-- [x] Support for 10+ languages (Chinese, English, Japanese, Korean, Spanish, etc.)
-
-### 📱 Special Pages
-- [x] **Anime Tracking Page** - Track anime watching progress and ratings
-- [x] **Friends Page** - Beautiful cards showcasing friend websites
-- [x] **Diary Page** - Share life moments, similar to social media
-- [x] **Archive Page** - Organized timeline view of articles
-- [x] **About Page** - Customizable personal introduction
-
-### 🛠 Technical Features
-- [x] **Enhanced code blocks** based on [Expressive Code](https://expressive-code.com/)
-- [x] **Math formula support** with KaTeX rendering
-- [x] **Image optimization** with PhotoSwipe gallery integration
-- [x] **SEO optimization** including sitemaps and meta tags
-- [x] **Performance optimization** with lazy loading and caching
-- [x] **Comment system** with Twikoo integration
+[**English**](README.en.md) /
 
 ## 🚀 Quick Start
 
@@ -108,8 +17,8 @@ A modern, feature-rich static blog template built with [Astro](https://astro.bui
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/matsuzaka-yuki/mizuki.git
-   cd mizuki
+   git clone https://github.com/mikuas/fuwari.git
+   cd fuwari
    ```
 
 2. **Install dependencies:**
@@ -279,19 +188,7 @@ Contributions are welcome! Feel free to submit issues and pull requests.
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgements
-
-- Based on the original [Fuwari](https://github.com/saicaca/fuwari) template
-- Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
-- Inspired by [Yukina](https://github.com/WhitePaper233/yukina) - a beautiful and elegant blog template
-- Translation functionality powered by [translate](https://gitee.com/mail_osc/translate) - AI i18n automatic HTML translation solution
-- Icons from [Iconify](https://iconify.design/)
-
-### Special Thanks
-
-- **[Yukina](https://github.com/WhitePaper233/yukina)** - Thanks for providing design inspiration and creativity that helped shape this project. Yukina is an elegant blog template that demonstrates excellent design principles and user experience.
-- **[translate](https://gitee.com/mail_osc/translate)** - Thanks for providing an innovative AI-driven i18n solution that enables automatic HTML translation with just two lines of JavaScript code. This open-source tool makes multilingual support extremely simple and efficient.
+[Mizuki](https://github.com/matsuzaka-yuki/mizuki)
 
 ---
 

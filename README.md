@@ -1,20 +1,16 @@
-# 🌸 Fuwari  
+# Fuwari  
 ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
 ![Astro](https://img.shields.io/badge/Astro-5.12.8-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Fuwari Preview](./README.png)
-
 一个现代化、功能丰富的静态博客模板，基于 [Astro](https://astro.build) 构建，具有先进的功能和精美的设计。
 
 
 🌏 README 语言
-[**English**](README.en.md) /
 [**中文**](README.md) /
-[**日本語**](./docs/README.ja.md) /
-[**中文繁体**](./docs/README.tw.md) /
+[**English**](README.en.md) /
 
 ## 🚀 快速开始
 
@@ -22,8 +18,8 @@
 
 1. **克隆仓库：**
    ```bash
-   git clone https://github.com/matsuzaka-yuki/mizuki.git
-   cd mizuki
+   git clone https://github.com/mikuas/fuwari.git
+   cd fuwari
    ```
 
 2. **安装依赖：**
@@ -111,7 +107,7 @@ pinned: false # 普通文章（默认）
 Mizuki 支持超越标准 GitHub Flavored Markdown 的增强功能：
 
 ### 📝 增强写作
-- **提示框：** 使用 `> [!NOTE]`、`> [!TIP]`、`> [!WARNING]` 等创建精美的标注框
+- **提示框：** 使用 `> [!NOTE]`、`> [!TIP]`、`> [!WARNING]`, `::note::` 等创建精美的标注框
 - **数学公式：** 使用 `$行内$` 和 `$$块级$$` 语法编写 LaTeX 数学公式
 - **代码高亮：** 高级语法高亮，支持行号和复制按钮
 - **GitHub 卡片：** 使用 `::github{repo="用户/仓库"}` 嵌入仓库卡片
@@ -180,32 +176,11 @@ export const siteConfig: SiteConfig = {
 - **日记页面：** 在 `src/pages/diary.astro` 中编辑动态
 - **关于页面：** 在 `src/content/spec/about.md` 中编辑内容
 
-## ✏️ 贡献
-
-我们欢迎贡献！请随时提交问题和拉取请求。
-
-1. Fork 仓库
-2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 打开拉取请求
-
 ## 📄 许可证
 
 本项目基于 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 🙏 致谢
-
-- 基于原始 [Fuwari](https://github.com/saicaca/fuwari) 模板
-- 使用 [Astro](https://astro.build) 和 [Tailwind CSS](https://tailwindcss.com) 构建
-- 灵感来源于 [Yukina](https://github.com/WhitePaper233/yukina) - 一个美丽优雅的博客模板
-- 翻译功能由 [translate](https://gitee.com/mail_osc/translate) 提供支持 - AI i18n 自动HTML翻译解决方案
-- 图标来自 [Iconify](https://iconify.design/)
-
-### 特别感谢
-
-- **[Yukina](https://github.com/WhitePaper233/yukina)** - 感谢提供设计灵感和创意，帮助塑造了这个项目。Yukina 是一个优雅的博客模板，展现了出色的设计原则和用户体验。
-- **[translate](https://gitee.com/mail_osc/translate)** - 感谢提供创新的AI驱动i18n解决方案，仅需两行JavaScript代码即可实现HTML自动翻译。这个开源工具让多语言支持变得极其简单高效。
+### 基于 [Mizuki](https://github.com/matsuzaka-yuki/mizuki) 模板 和 [Fuwari](https://github.com/saicaca/fuwari.git)
 
 ---
 

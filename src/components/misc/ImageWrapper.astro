@@ -44,7 +44,7 @@ if (isLocal) {
 	img = await file();
 }
 
-const imageClass = "w-full h-full object-cover";
+const imageClass = "w-full h-full object-cover transition-transform duration-300 hover:scale-110";
 const imageStyle = `object-position: ${position}`;
 ---
 <div id={id} class:list={[className, 'overflow-hidden relative']}>

@@ -1,6 +1,7 @@
 ---
 
 import { getEntry, render } from "astro:content";
+import { toCodes } from "astro:i18n";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
@@ -21,20 +22,112 @@ const items = [
 		siteurl: "https://github.com/withastro/astro",
 		tags: ["Framework"],
 	},
+	{
+		title: "AkileCloud",
+		imgurl: "https://akile.io/favicon.ico",
+		desc: "云服务器",
+		siteurl: "https://akile.io/",
+		tags: ["CloudServiceArea"],
+	},
+	{
+		title: "Netlify",
+		imgurl: "https://netlify.com/favicon/apple-touch-icon.png",
+		desc: "静态网站托管平台",
+		siteurl: "https://netlify.com",
+		tags: ["WebHostingPlatform"],
+	},
+	{
+		title: "Convertio",
+		imgurl:
+			"https://static.convertio.co/img/apple-touch-icon-180x180-precomposed.png",
+		desc: "在线文件转换器",
+		siteurl: "https://convertio.co/zh/",
+		tags: ["FileConverter"],
+	},
+	{
+		title: "Chat-GPT",
+		imgurl: "https://cdn.oaistatic.com/assets/favicon-eex17e9e.ico",
+		desc: "一款好用的AI工具",
+		siteurl: "https://9.234456.xyz/abc.html?t=567",
+		tags: ["AI"],
+	},
+	// {
+	//     title: "机场",
+	//     imgurl: "",
+	//     desc: "机场订阅",
+	//     siteurl: "https://9.234456.xyz/abc.html?t=567",
+	//     tags: ["VPN"],
+	// },
+	{
+		title: "Fish-Audio",
+		imgurl: "https://fish.audio/fish-social-og.png",
+		desc: "文本转AI语音,语音克隆,语音转文本工具",
+		siteurl: "https://fish.audio/zh-CN/",
+		tags: ["AI"],
+	},
+	{
+		title: "Modrinth",
+		imgurl: "https://cdn.modrinth.com/modrinth-new.png",
+		desc: "Minecraft模组,资源包,数据包,光影,模组包,插件的下载平台",
+		siteurl: "https://modrinth.com",
+		tags: ["Game", "Minecraft"],
+	},
+	{
+		title: "WZGuides",
+		imgurl: "https://wzguides.cn/home/favicon.ico",
+		desc: "Call Of Duty Guides",
+		siteurl: "https://wzguides.cn/wz2/gunsmith",
+		tags: ["Game", "Call Of Duty", "WZ"],
+	},
+	{
+		title: "Itellyou",
+		imgurl: "https://msdn.itellyou.cn/favicon.ico",
+		desc: "映像文件下载网站",
+		siteurl: "https://msdn.itellyou.cn/",
+		tags: ["Tool"],
+	},
+	{
+		title: "动漫图片和壁纸",
+		imgurl: "https://anime-pictures.net/favicon.ico",
+		desc: "全年龄的动漫图片和壁纸",
+		siteurl: "https://anime-pictures.net/?lang=zh_CN;",
+		tags: ["Anime", "Wallpaper"],
+	},
     {
-        title: "AkileCloud",
-        imgurl: "https://akile.io/favicon.ico",
-        desc: "云服务器",
-        siteurl: "https://akile.io/",
-        tags: ["CloudServiceArea"]
+        title: "Pixiv",
+		imgurl: "https://www.pixiv.net/favicon.ico",
+		desc: "插画、漫画、小说作品交流服务 [pixiv]",
+        siteurl: "https://www.pixiv.net/",
+        tags: ["Anime", "Wallpaper"],
     },
     {
-        title: "Netlify",
-        imgurl: "https://netlify.com/favicon/apple-touch-icon.png",
-        desc: "静态网站托管平台",
-        siteurl: "https://netlify.com",
-        tags: ["WebHostingPlatform"],
-    }
+        title: "TouchGal",
+		imgurl: "https://www.touchgal.us/favicon.ico",
+		desc: "一站式 Galgame 文化社区",
+        siteurl: "https://www.touchgal.us/",
+        tags: ["Anime", "Wallpaper"],
+    },
+    {
+        title: "ACG盒子",
+		imgurl: "https://www.acgbox.link/wp-content/uploads/logo/86742914_p0.png",
+		desc: "ACG盒子 - 专注ACG的导航盒子_ACG导航网站",
+        siteurl: "https://www.acgbox.link/",
+        tags: ["Anime", "Wallpaper"],
+    },
+    {
+        title: "Phira",
+		imgurl: "https://phira.moe/assets/icon-708be29a.png",
+		desc: "Phigros 二创社区",
+        siteurl: "https://phira.moe/",
+        tags: ["Anime", "Wallpaper"],
+    },
+    {
+        title: "UU在线工具",
+        imgurl: "https://uutool.cn/assets/images/favicon.png",
+        desc: "在线圆角图片制作工具",
+        siteurl: "https://uutool.cn/img-radius/",
+        tags: ["Anime", "Wallpaper"],
+    },
 ];
 
 function shuffleArray(array) {
@@ -46,34 +139,35 @@ function shuffleArray(array) {
 	return newArray;
 }
 
-const shuffledItems = shuffleArray(items);
+// const shuffledItems = shuffleArray(items);
 ---
 <MainGridLayout title={i18n(I18nKey.friends)} description={i18n(I18nKey.friends)}>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full ">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4">
-                {shuffledItems.map((item) => (
-                    <div class="flex flex-nowrap items-stretch h-28 gap-4 rounded-[var(--radius-large)]">
-                        <div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200 dark:bg-zinc-900">
-                            <img src={item.imgurl} alt="站点头像" class="w-full h-full object-cover">
-                        </div>
-                        <div class="grow w-full">
-                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 mb-1">{item.title}</div>
-                            <div class="text-50 text-sm font-medium">{item.desc}</div>
-                            <div class:list={["items-center", {"flex": true, "hidden md:flex" : false}]}>
-                                <div class="flex flex-row flex-nowrap items-center">
-                                    {(item.tags && item.tags.length > 0) && item.tags.map((tag,i) => (
-                                    <div class:list={[{"hidden": i==0}, "mx-1.5 text-[var(--meta-divider)] text-sm" ]}>
-                                        /
+                <!-- {shuffledItems.map((item) => ( -->
+                {items.map((item) => (
+                    <div class="flex flex-nowrap items-stretch h-28">
+                        <a href={item.siteurl} target="_blank" rel="noopener noreferrer"class="flex w-full rounded-[var(--radius-large)] btn-regular active:scale-95">
+                            <div class="w-28 h-28 flex-shrink-0 overflow-hidden rounded-[var(--radius-large)] bg-zinc-200 dark:bg-zinc-900">
+                                <img src={item.imgurl} alt="站点头像" class="w-full h-full object-cover rounded-[var(--radius-large)]">
+                            </div>
+                            <div class="grow w-full pl-4">
+                                <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 mb-1">{item.title}</div>
+                                <div class="text-50 text-sm font-medium">{item.desc}</div>
+                                <div class:list={["items-center", {"flex": true, "hidden md:flex" : false}]}>
+                                    <div class="flex flex-row flex-nowrap items-center">
+                                        {(item.tags && item.tags.length > 0) && item.tags.map((tag,i) => (
+                                        <div class:list={[{"hidden": i==0}, "mx-1.5 text-[var(--meta-divider)] text-sm" ]}>
+                                            /
+                                        </div>
+                                        <span class="transition text-50 text-sm font-medium">
+                                            {tag}
+                                        </span>))}
+                                        {!(item.tags && item.tags.length > 0) && <div class="transition text-50 text-sm font-medium">{i18n(I18nKey.noTags)}</div>}
                                     </div>
-                                    <span class="transition text-50 text-sm font-medium">
-                                        {tag}
-                                    </span>))}
-                                    {!(item.tags && item.tags.length > 0) && <div class="transition text-50 text-sm font-medium">{i18n(I18nKey.noTags)}</div>}
                                 </div>
                             </div>
-                        </div>
-                        <a href={item.siteurl} target="_blank" rel="noopener noreferrer"class="flex btn-regular w-[3.25rem] rounded-lg bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="transition text-[var(--primary)] text-4xl mx-auto iconify iconify--material-symbols" width="1em" height="1em" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z"></path>
                             </svg>

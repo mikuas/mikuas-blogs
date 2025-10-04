@@ -23,6 +23,7 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		url: "/friends/",
 		icon: "material-symbols:group",
 	},
+
 	[LinkPreset.Anime]: {
 		name: i18n(I18nKey.anime),
 		url: "/anime/",
@@ -33,11 +34,18 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		url: "/diary/",
 		icon: "material-symbols:book",
 	},
-	// [LinkPreset.Gallery]: {
-	// 	name: i18n(I18nKey.gallery),
-	// 	url: "/gallery/",
-	// 	icon: "material-symbols:photo-library",
-	// },
+	[LinkPreset.Gallery]: {
+		name: "画廊",
+		url: "/albums/",
+		icon: "material-symbols:photo-library",
+	},
+	[LinkPreset.My]: {
+		name: "我的",
+		url: "/content/",
+		icon: "material-symbols:person",
+		children: [LinkPreset.Anime, LinkPreset.Diary, LinkPreset.Gallery],
+	},
+
 	[LinkPreset.Projects]: {
 		name: i18n(I18nKey.projects),
 		url: "/projects/",
@@ -52,5 +60,11 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		name: i18n(I18nKey.timeline),
 		url: "/timeline/",
 		icon: "material-symbols:timeline",
+	},
+	[LinkPreset.Other]: {
+		name: "其他",
+		url: "#",
+		icon: "material-symbols:more-horiz",
+		children: [LinkPreset.Projects, LinkPreset.Skills, LinkPreset.Timeline],
 	},
 };

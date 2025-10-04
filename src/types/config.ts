@@ -2,7 +2,7 @@ import type { AUTO_MODE, DARK_MODE, LIGHT_MODE } from "../constants/constants";
 
 export type SiteConfig = {
 	title: string;
-	subtitle: string;
+	subtitle?: string;
 	keywords?: string[]; // 站点关键词，用于生成 <meta name="keywords">
 
 	lang:
@@ -32,26 +32,15 @@ export type SiteConfig = {
 		};
 	};
 
-	translate?: {
-		enable: boolean; // 是否启用翻译功能
-		service?: string; // 翻译服务类型，如 'client.edge'
-		defaultLanguage?: string; // 默认语言
-		showSelectTag?: boolean; // 是否显示语言选择下拉框
-		autoDiscriminate?: boolean; // 是否自动识别用户语言
-		ignoreClasses?: string[]; // 忽略翻译的CSS类名
-		ignoreTags?: string[]; // 忽略翻译的HTML标签
-	};
-
 	// 添加bangumi配置
 	bangumi?: {
 		userId?: string; // Bangumi用户ID
 	};
-	
+
 	// 添加番剧页面配置
 	anime?: {
 		mode?: "bangumi" | "local"; // 番剧页面模式
 	};
-
 
 	banner: {
 		enable: boolean;
@@ -108,15 +97,17 @@ export type Favicon = {
 
 export enum LinkPreset {
 	Home = 0,
-	Archive = 1,
-	About = 2,
-	Friends = 3,
-	Anime = 4,
-	Diary = 5,
-
-	Projects = 7,
-	Skills = 8,
-	Timeline = 9,
+    Archive = 1,
+    About = 2,
+    Friends = 3,
+    My = 4,
+    Anime = 5,
+    Diary = 6,
+    Gallery = 7,
+    Other = 8,
+    Projects = 9,
+    Skills = 10,
+    Timeline = 11,
 }
 
 export type NavBarLink = {
@@ -140,7 +131,6 @@ export type ProfileConfig = {
 		url: string;
 		icon: string;
 	}[];
-
 };
 
 export type LicenseConfig = {
