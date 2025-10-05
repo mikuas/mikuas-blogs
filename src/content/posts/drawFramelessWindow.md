@@ -3,7 +3,7 @@ title: PySide6如何绘制无框窗口
 published: 2024-09-02
 description: '用PySide6绘制无框窗口'
 tags: ["PySide6", "Python", "Qt"]
-image: 'guide/drawFramelessWindow.png'
+image: 'guide/alxy.webp'
 category: 'PySide6'
 draft: false 
 lang: ''

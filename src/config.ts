@@ -104,11 +104,11 @@ export const siteConfig: SiteConfig = {
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
 	favicon: [
 		// 留空以使用默认 favicon
-		// {
-		// 	src: "/favicon/favicon-light-192.png", // 图标文件路径
-		// 	theme: "light", // 可选，指定主题 'light' | 'dark'
-		// 	sizes: "192x192", // 可选，图标大小
-		// },
+		{
+			src: "/favicon/favicon-light-192.png", // 图标文件路径
+			theme: "light", // 可选，指定主题 'light' | 'dark'
+			sizes: "192x192", // 可选，图标大小
+		},
 	],
 
 	// 字体配置
@@ -129,7 +129,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
 		enable: true, // 启用轮播
-		interval: 3.5, // 轮播间隔时间（秒）
+		interval: 4, // 轮播间隔时间（秒）
 	},
 	zIndex: -1, // 层级，确保壁纸在背景层
 	opacity: 1, // 壁纸透明度

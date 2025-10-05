@@ -4,9 +4,17 @@ createTime: 2025/08/17 17:21:41
 permalink: /special/other/
 ---
 
+:::note
+[`PostCard Image Style`](../../components/PostCard.astro)   Widget[ImageWrapper]
+
+[`Friends`](../../pages/friends.astro)
+:::
+
 # 项目展示、技能、时间线页面使用指南
 
 本指南将帮助您配置和自定义项目展示页面、技能页面和时间线页面的内容。
+
+
 
 ## 📁 文件结构概览
 

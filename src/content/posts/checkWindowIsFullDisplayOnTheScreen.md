@@ -2,7 +2,7 @@
 title: PySide6如何检测窗口是否可以在屏幕完全显示
 published: 2025-05-11
 description: 检测窗口是否完整显示在屏幕内
-image: ''
+image: 'guide/xd.png'
 category: 'PySide6'
 tags: ["PySide6", "Python", "Qt"]
 draft: false 

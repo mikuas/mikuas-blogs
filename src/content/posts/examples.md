@@ -1,7 +1,7 @@
 ---
 title: Examples
 published: 2024-01-13
-description: ' '
+description: 'demo'
 image: 'guide/examples.webp'
 category: 'Other'
 tags: ["Other"]
