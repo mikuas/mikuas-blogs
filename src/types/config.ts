@@ -108,6 +108,7 @@ export enum LinkPreset {
     Projects = 9,
     Skills = 10,
     Timeline = 11,
+    App = 12,
 }
 
 export type NavBarLink = {

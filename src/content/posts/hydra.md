@@ -1,6 +1,6 @@
 ---
 title: hydra使用示例
-published: 2025-10-05
+published: 2024-04-14
 description: '使用hydra进行密码爆破'
 image: ''
 tags: ["Hydra", "Password"]

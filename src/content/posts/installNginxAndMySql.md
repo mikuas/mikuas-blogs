@@ -1,6 +1,6 @@
 ---
 title: 如何在Linux(CentOS)下安装Niginx和MySql
-published: 2025-10-05
+published: 2025-06-05
 description: '在CentOS下安装Nginx和MySql'
 image: 'guide/d5.webp'
 tags: ["Linux", "Nginx", "MySql"]

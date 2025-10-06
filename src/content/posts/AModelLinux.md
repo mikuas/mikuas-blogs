@@ -5,7 +5,7 @@ description: '配置Nginx安全策略, 防护墙策略'
 image: ''
 tags: ["网络安全", "Nginx", "Firewalld"]
 category: '网络安全'
-draft: false 
+draft: true 
 lang: ''
 pinned: false
 author: Mikuas

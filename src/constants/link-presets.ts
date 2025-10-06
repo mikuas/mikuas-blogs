@@ -1,6 +1,6 @@
 import I18nKey from "@i18n/i18nKey";
-import { i18n } from "@i18n/translation";
-import { LinkPreset, type NavBarLink } from "@/types/config";
+import {i18n} from "@i18n/translation";
+import {LinkPreset, type NavBarLink} from "@/types/config";
 
 export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 	[LinkPreset.Home]: {
@@ -61,10 +61,15 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		url: "/timeline/",
 		icon: "material-symbols:timeline",
 	},
+    [LinkPreset.App]: {
+        name: i18n(I18nKey.app),
+        url: "/app/",
+        icon: "material-symbols:apps",
+    },
 	[LinkPreset.Other]: {
 		name: "其他",
 		url: "#",
 		icon: "material-symbols:more-horiz",
-		children: [LinkPreset.Projects, LinkPreset.Skills, LinkPreset.Timeline],
+		children: [LinkPreset.Projects, LinkPreset.Skills, LinkPreset.Timeline, LinkPreset.App],
 	},
 };

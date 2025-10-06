@@ -1,7 +1,6 @@
 ---
 
 import { getEntry, render } from "astro:content";
-import { toCodes } from "astro:i18n";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
@@ -29,6 +28,13 @@ const items = [
 		siteurl: "https://akile.io/",
 		tags: ["CloudServiceArea"],
 	},
+    {
+        title: "Vercel",
+        imgurl: "https://vercel.com/favicon.ico",
+        desc: "静态网站托管平台",
+        siteurl: "https://vercel.com",
+        tags: ["WebHostingPlatform"],
+    },
 	{
 		title: "Netlify",
 		imgurl: "https://netlify.com/favicon/apple-touch-icon.png",

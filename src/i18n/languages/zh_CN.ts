@@ -220,4 +220,6 @@ export const zh_CN: Translation = {
 	[Key.hour]: "小时",
 	[Key.minute]: "分",
 	[Key.second]: "秒",
+
+    [Key.app]: "软件"
 };
