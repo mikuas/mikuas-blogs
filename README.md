@@ -148,15 +148,9 @@ Mizuki 支持超越标准 GitHub Flavored Markdown 的增强功能：
 export const siteConfig: SiteConfig = {
   title: "您的博客名称",
   subtitle: "您的博客描述",
-  lang: "zh-CN", // 或 "en"、"ja" 等
   themeColor: {
     hue: 210, // 0-360，主题色调
     fixed: false, // 隐藏主题色选择器
-  },
-  translate: {
-    enable: true, // 启用翻译功能
-    service: "client.edge", // 翻译服务
-    defaultLanguage: "chinese_simplified",
   },
   banner: {
     enable: true,

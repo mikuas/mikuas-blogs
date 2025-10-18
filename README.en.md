@@ -147,15 +147,9 @@ Edit `src/config.ts` to customize your blog:
 export const siteConfig: SiteConfig = {
   title: "Your Blog Name",
   subtitle: "Your Blog Description",
-  lang: "en", // or "zh-CN", "ja", etc.
   themeColor: {
     hue: 210, // 0-360, theme hue
     fixed: false, // Hide theme color picker
-  },
-  translate: {
-    enable: true, // Enable translation
-    service: "client.edge", // Translation service
-    defaultLanguage: "english",
   },
   banner: {
     enable: true,

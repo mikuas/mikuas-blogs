@@ -218,7 +218,7 @@ enum I18nKey {
 	minute = "minute",
 	second = "second",
 
-    app = "app"
+    app = "app",
 }
 
 export default I18nKey;
