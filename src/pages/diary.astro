@@ -3,6 +3,11 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
+let codSettingImages = [];
+for (let i = 1; i <= 9; i++) {
+	codSettingImages.push(`/images/diary/Call of Duty Settings/Control/${i}.png`);
+}
+
 // 示例即刻短文数据
 const moments = [
 	{
@@ -11,13 +16,22 @@ const moments = [
 		date: "2025-01-15T10:30:00Z",
 		images: ["/images/diary/sakura.jpg", "/images/diary/1.jpg"],
 	},
-    {
-        id: 2,
-        content: "Phigros!",
-        date: "2025-10-02T03:02:00Z",
-		images: ["/images/diary/0.jpg", "/images/diary/2.jpg"],
-    }
-];
+	{
+		id: 2,
+		content: "Phigros!",
+		date: "2025-10-02T03:02:00Z",
+		images: [
+			"/images/diary/Phingros/Demo/0.jpg",
+			"/images/diary/Phingros/Demo/1.jpg",
+		],
+	},
+	{
+		id: 3,
+		content: "Call Of Duty Control Settings",
+		date: "2024-11-20T14:45:00Z",
+		images: codSettingImages,
+	},
+];	
 
 // 时间格式化函数
 function formatTime(dateString: string): string {
